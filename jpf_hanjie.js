@@ -61,9 +61,22 @@ function init() {
 
       // insert the HTML code for the first puzzle table
       document.getElementById("puzzle").innerHTML = drawPuzzle(puzzle1Hint, puzzle1Rating, puzzle1);
+
+      //add event handlers for the puzzle buttons
+      var puzzleButtons = document.getElementsByClassName("puzzles");
+
+      for (var i = 0; i < puzzleButtons.length; i++) {
+            puzzleButtons[i].onclick = swapPuzzle;
+      }
 }
 
-
+function swapPuzzle(e) {
+      var puzzleID = e.target.id;
+      
+      var puzzleTitle = e.target.value;
+      document.getElementById("puzzleTitle").innerHTML = puzzleTitle
+      document .getElementById
+}
 
 
 
